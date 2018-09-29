@@ -5,9 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    app:behavior_hideable="true"
-    app:behavior_peekHeight="64dp"
-    android:background="@android:color/white">
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="30dp"
+    android:background="@android:color/white"
+    android:padding="10dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal">
 
     <View
         android:layout_width="40dp"
@@ -20,6 +23,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecyclerStickers"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

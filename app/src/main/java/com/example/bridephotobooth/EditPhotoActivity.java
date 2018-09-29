@@ -50,6 +50,7 @@ public class EditPhotoActivity extends Activity implements StickerListAdapter.On
     /*StickerImageView iv_sticker;*/
     private StickerListAdapter mStickerListAdapter;
     List<DrawableSticker> stickers = new ArrayList<>();
+    public static final int STATE_ANCHOR = 6;
 
     @ViewById
     Toolbar mToolbar;
@@ -111,6 +112,27 @@ public class EditPhotoActivity extends Activity implements StickerListAdapter.On
         stickers.add(new DrawableSticker(getDrawable(R.drawable.intercontinental)));
         stickers.add(new DrawableSticker(getDrawable(R.drawable.hearts)));
         stickers.add(new DrawableSticker(getDrawable(R.drawable.rings)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.blue_fh)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.bow_tie)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.bunny_ears)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.cake)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.couple)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.crown)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.cyan_party_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.dark_mouth)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.fire)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.green_candy)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.green_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.green_party_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.pink_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.pink_mouth)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.pink_party_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.purple_mouth)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.rainbow)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.red_glasses)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.red_mouth)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.top_hat)));
+        stickers.add(new DrawableSticker(getDrawable(R.drawable.yellow_glasses)));
 
         mStickerListAdapter = new StickerListAdapter(stickers);
         mStickerListAdapter.setOnClickItem(this);
@@ -201,6 +223,11 @@ public class EditPhotoActivity extends Activity implements StickerListAdapter.On
 
     @Override
     public void onClickItem(DrawableSticker drawableSticker) {
+        /*Sticker sticker = null;
+        if(stickers.contains(drawableSticker)){
+            sticker = drawableSticker;
+            sticker.setAlpha(1);
+        }*/
         mStickerView.addSticker(drawableSticker);
     }
 
@@ -209,7 +236,7 @@ public class EditPhotoActivity extends Activity implements StickerListAdapter.On
         Sticker sticker = null;
         if(stickers.contains(drawableSticker)){
             sticker = drawableSticker;
+            sticker.setAlpha(0);
         }
-        mStickerView.remove(sticker);
     }
 }
