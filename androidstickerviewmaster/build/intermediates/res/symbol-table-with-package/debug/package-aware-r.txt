@@ -1,0 +1,5 @@
+com.knef.stickerview
+int drawable flip 0x7f090001
+int drawable remove 0x7f090002
+int drawable zoominout 0x7f090003
+int string app_name 0x7f150001
